@@ -1,2 +1,1 @@
-# newsreaderpolitics
-newsreaderpolitics
+# kursova
