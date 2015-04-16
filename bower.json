@@ -1,11 +1,11 @@
 {
-  "name": "kursovaDB",
+  "name": "news",
   "version": "0.0.1",
-  "homepage": "https://github.com/san4osq/kursova",
+  "homepage": "https://github.com/san4osq/news",
   "authors": [
     "san4osq <san4osq@ya.ru>"
   ],
-  "description": "kursova description",
+  "description": "news description",
   "main": "server.js",
   "license": "MIT",
   "ignore": [

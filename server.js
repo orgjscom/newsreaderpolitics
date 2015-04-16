@@ -18,19 +18,17 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'www')));
 app.use('/bower_components',express.static(path.join(__dirname, 'bower_components')));
 
-var index  = "../www/index";
+var index  = "../www/globalnews/index";
 app.get('/', function(req, res){
     res.render(index);
 });
 var mongoose = require('mongoose');
 
-
-//module.exports.dbQuery = function(connectionQuery) {
 mongoose.connect('mongodb://newsreaderpolitics:newsreaderpolitics@ds055689.mongolab.com:55689/newsreaderpolitics');
 
 var News = mongoose.model('News', { name: String });
 
-var kitty = new News({ name: 'News1Random' });
+var kitty = new News({ name: '11111111' });
 kitty.save(function (err) {
     if (err) {
         console.log('err');
@@ -39,7 +37,20 @@ kitty.save(function (err) {
     }
 
 });
-//}
+
+var jsdom = require("jsdom");
+
+jsdom.env({
+    url: "http://news.ycombinator.com/",
+    scripts: ["http://code.jquery.com/jquery.js"],
+    done: function (errors, window) {
+        var $ = window.$;
+        console.log("HN Links");
+        $("td.title:not(:last) a").each(function() {
+            console.log(" -", $(this).text());
+        });
+    }
+});
 
 
 
