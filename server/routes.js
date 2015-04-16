@@ -1,8 +1,9 @@
-//var user = require('./user/user');
+var main_all_news = require('./nine/main_all_news');
 //var product = require('./product/product');
 
 module.exports.initialize = function(app) {
 
+    app.get('/main_all_news', main_all_news.result);
 //    app.get('/user', user.index);
 //    app.get('/user/country', user.country);
 //

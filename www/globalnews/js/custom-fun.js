@@ -414,12 +414,12 @@
        start();
      }
      //pause on mouseover
-   $elem.on('mouseover', function() {
-     isPause = true;
-   })
-   $elem.on('mouseout', function() {
-     isPause = false;
-   })
+//   $elem.on('mouseover', function() {
+//     isPause = true;
+//   })
+//   $elem.on('mouseout', function() {
+//     isPause = false;
+//   })
 
 
  });
